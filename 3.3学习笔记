@@ -1,0 +1,78 @@
+描述用于与 Azure 交互的工具
+Azure 提供了多个用于管理环境的工具，包括：
+Azure 门户
+Azure PowerShell
+Azure 命令行接口 （CLI）
+什么是 Azure 门户？
+Azure 门户是基于 Web 的统一控制台，提供命令行工具的替代方法
+可以使用图形用户界面管理 Azure 订阅
+可以：
+生成、管理和监视从简单 Web 应用到复杂云部署的所有内容
+为组织的资源视图创建自定义仪表板
+为最佳体验配置辅助功能选项
+Azure 门户专为复原和持续可用性而设计
+在每个 Azure 数据中心都存在
+Azure Cloud Shell
+Azure Cloud Shell 是基于浏览器的 shell 工具，可用于使用 shell 创建、配置和管理 Azure 资源
+同时支持 Azure PowerShell 和 Azure 命令行接口（CLI），这是 Bash shell
+它是基于浏览器的 shell 体验，无需本地安装或配置。
+它已向 Azure 凭据进行身份验证，因此登录时，它本质上知道你是谁以及拥有哪些权限。
+选择最熟悉的 shell;Azure Cloud Shell 支持 Azure PowerShell 和 Azure CLI（使用 Bash）
+什么是 Azure PowerShell？
+Azure PowerShell 是开发人员、DevOps 和 IT 专业人员可以运行名为 command-lets（cmdlet）的命令的 shell
+ Cmdlet 可以独立运行来处理一次性更改，也可以组合它们来帮助协调复杂的作，例如：
+单个资源或多个连接资源的常规设置、拆卸和维护。
+部署整个基础结构（可能包含来自命令性代码的数十或数百个资源）。
+除了通过 Azure Cloud Shell 提供，还可以在 Windows、Linux 和 Mac 平台上安装和配置 Azure PowerShell
+什么是 Azure CLI？
+Azure CLI 在功能上等效于 Azure PowerShell，主要区别在于命令的语法。 虽然 Azure PowerShell 使用 PowerShell 命令，但 Azure CLI 使用 Bash 命令。
+Azure CLI 提供通过代码处理离散任务或协调复杂作的相同优势
+第三单元 描述 Azure Arc 的用途
+管理混合和多云环境可能会很快变得复杂
+在利用 Azure 资源管理器（ARM）时，Arc 允许将 Azure 合规性和监视扩展到混合和多云配置
+Azure Arc 通过提供一致的多云和本地管理平台来简化治理和管理：
+通过将现有非 Azure 资源投影到 ARM，共同管理整个环境。
+管理多云和混合虚拟机、Kubernetes 群集和数据库，就像在 Azure 中运行一样。
+无论它们位于何处，都使用熟悉的 Azure 服务和管理功能。
+继续使用传统的 ITOps，同时引入 DevOps 做法以支持环境中的新云和原生模式。
+将自定义位置配置为已启用 Azure Arc 的 Kubernetes 群集和群集扩展之上的抽象层。
+Azure Arc 在 Azure 外能做什么？
+服务器
+Kubernetes 群集
+Azure 数据服务
+SQL Server
+虚拟机（预览版）
+第四单元  介绍 Azure 资源管理器和 Azure ARM 模板
+Azure 资源管理器（ARM）是 Azure 的部署和管理服务
+每当使用 Azure 资源执行任何作时，ARM 都参与其中
+当用户从任何 Azure 工具、API 或 SDK 发送请求时，ARM 将收到请求
+在所有不同的工具中看到一致的结果和功能，因为所有请求都通过同一 API 进行处理
+Azure 资源管理器的优势
+通过声明性模板而不是脚本管理基础结构。 资源管理器模板是一个 JSON 文件，用于定义要部署到 Azure 的内容。
+将解决方案的所有资源作为一个整体进行部署、管理和监视，而不是单独处理这些资源。
+在整个开发生命周期内重新部署解决方案，并确保资源部署在一致状态。
+定义资源之间的依赖关系，以便按正确的顺序部署它们。
+将访问控制应用于所有服务，因为角色访问控制 (RBAC) 已经内置集成到管理平台中。
+将标记应用于资源，以逻辑方式组织订阅中的所有资源。
+通过查看共享相同标记的资源组的成本来阐明组织的计费。
+基础结构即代码
+即代码是将基础结构作为代码行进行管理的概念
+过可重复的模板和配置来管理整个部署
+ARM 模板
+可以描述要以声明性 JSON 格式使用的资源
+用 ARM 模板，部署代码在运行任何代码之前进行验证
+确保正确创建和连接资源。 然后，该模板会并行协调这些资源的创建
+开发人员、DevOps 专业人员或 IT 专业人员只需要定义 ARM 模板中每个资源的所需状态和配置，并且该模板会执行其余作
+使用 ARM 模板的好处
+声明性语法
+可重复的结果
+编排
+模块化文件
+扩展性
+Bicep 
+Bicep 是一种使用声明性语法部署 Azure 资源的语言
+对所有资源类型和 API 版本的支持
+简单语法
+可重复的结果
+协调
+模块化
